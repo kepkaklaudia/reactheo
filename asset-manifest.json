@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/reactheo/static/css/main.149ec5ac.css",
+    "main.js": "/reactheo/static/js/main.3b8d6506.js",
+    "static/js/787.6e6baf1b.chunk.js": "/reactheo/static/js/787.6e6baf1b.chunk.js",
+    "static/media/logo.svg": "/reactheo/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/reactheo/index.html",
+    "main.149ec5ac.css.map": "/reactheo/static/css/main.149ec5ac.css.map",
+    "main.3b8d6506.js.map": "/reactheo/static/js/main.3b8d6506.js.map",
+    "787.6e6baf1b.chunk.js.map": "/reactheo/static/js/787.6e6baf1b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.149ec5ac.css",
+    "static/js/main.3b8d6506.js"
+  ]
+}
