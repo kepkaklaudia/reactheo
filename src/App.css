@@ -1,0 +1,7 @@
+
+.container {
+  background-color: rgba(225, 225, 225, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
