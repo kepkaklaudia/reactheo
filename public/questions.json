@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Which statements about React are true?",
+    "options": [
+      {
+        "text": "React is a library for building user interfaces.",
+        "isTrue": true,
+        "index": 0
+      },
+      {
+        "text": "React allows you to break code into pieces called components.",
+        "isTrue": true,
+        "index": 1
+      },
+      {
+        "text": "React doesn't take care of routing or data management.",
+        "isTrue": true,
+        "index": 2
+      },
+      {
+        "text": "There is only one way to start a new React project",
+        "isTrue": false,
+        "index": 3
+      }
+    ]
+  }
+]
