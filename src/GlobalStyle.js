@@ -21,4 +21,12 @@ export const GlobalStyle = createGlobalStyle`
     background-color: white;
     min-height: 100vh;
     width: 100%;
+  }
+
+  h1 {
+    color: #23272F;
+    font-size: 60px;
+    font-weight: 600;
+    margin: 60px 20px;
+  }
 `;
