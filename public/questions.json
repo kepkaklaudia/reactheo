@@ -23,5 +23,30 @@
         "index": 3
       }
     ]
+  },
+  {
+    "question": "Which statements about starting new React project are true?",
+    "options": [
+      {
+        "text": "You can add React to an existing HTML page.",
+        "isTrue": true,
+        "index": 0
+      },
+      {
+        "text": "It's possible to start with an opinionated framework that has common features like data fetching and routing built-in.",
+        "isTrue": true,
+        "index": 1
+      },
+      {
+        "text": "Start with an HTML file and a script tag requires Node.js",
+        "isTrue": false,
+        "index": 2
+      },
+      {
+        "text": "You have to build your whole website with React",
+        "isTrue": false,
+        "index": 3
+      }
+    ]
   }
 ]
