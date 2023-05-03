@@ -10,4 +10,9 @@ export const StyledButton = styled.button`
   border: none;
   font-weight: 500;
   border-radius: 30px;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
 `;
