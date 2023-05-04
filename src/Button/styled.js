@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledButton = styled.button`
   font-size: 18px;
@@ -15,4 +15,12 @@ export const StyledButton = styled.button`
     opacity: 0.8;
     cursor: pointer;
   }
+
+  ${({ start }) =>
+    start &&
+    css`
+      font-size: 22px;
+      width: 200px;
+      height: 60px;
+    `}
 `;
