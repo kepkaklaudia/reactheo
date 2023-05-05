@@ -23,4 +23,10 @@ export const StyledButton = styled.button`
       width: 200px;
       height: 60px;
     `}
+
+  ${({ width }) =>
+    width &&
+    css`
+      width: 170px;
+    `}
 `;
