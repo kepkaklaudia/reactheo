@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useData } from "./getQuestions";
 import { StyledListButton, Wrapper, Heading, Buttons } from "./styled";
 import { Loader } from "../Loader/styled";
@@ -20,6 +20,11 @@ export const Quiz = () => {
     }
   };
   const [answersChecked, setAnswersChecked] = useState(false);
+
+  useEffect(() => {
+    console.log(active);
+  }, [ active]);
+
 
   return status === "loading" ? (
     <Loader />
