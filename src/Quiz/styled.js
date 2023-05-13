@@ -8,3 +8,7 @@ export const Wrapper = styled.div`
   max-width: 1000px;
   margin: 0 20px;
 `;
+
+export const Heading = styled.h2`
+  margin: 25px auto;
+`;
