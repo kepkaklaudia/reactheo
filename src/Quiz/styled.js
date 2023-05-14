@@ -12,3 +12,15 @@ export const Wrapper = styled.div`
 export const Heading = styled.h2`
   margin: 25px auto;
 `;
+
+export const StyledListButton = styled.button`
+  width: 80%;
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  font-size: 20px;
+  color: #404756;
+  background-color: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+`;
