@@ -13,6 +13,11 @@ export const Heading = styled.h2`
   margin: 25px auto;
 `;
 
+export const Container = styled.div`
+  margin: 25px auto;
+  width: 400px;
+`;
+
 export const StyledListButton = styled.button`
   width: 80%;
   margin-top: 20px;
