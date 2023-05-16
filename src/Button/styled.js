@@ -29,4 +29,11 @@ export const StyledButton = styled.button`
     css`
       width: 170px;
     `}
+
+    ${({ restart }) =>
+    restart &&
+    css`
+      margin-top: 40px;
+      width: 150px;
+    `}
 `;
