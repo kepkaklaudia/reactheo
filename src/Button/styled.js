@@ -36,4 +36,8 @@ export const StyledButton = styled.button`
       margin-top: 40px;
       width: 150px;
     `}
+
+    @media (max-width: 696px) {
+      margin-top: 30px;
+    }
 `;
