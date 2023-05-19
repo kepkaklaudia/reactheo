@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
   padding: 20px;
@@ -16,6 +16,10 @@ export const Heading = styled.h2`
 export const Container = styled.div`
   margin: 25px auto;
   width: 400px;
+
+  @media (max-width: 696px) {
+    width: 280px;
+  }
 `;
 
 export const StyledListButton = styled.button`
