@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   padding: 20px;
@@ -32,4 +32,11 @@ export const StyledListButton = styled.button`
   color: #404756;
   background-color: white;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    transition: border 0.5s, scale 0.5s;
+    border: 2px solid #087ea4;
+    cursor: pointer;
+    scale: 1.03;
+  }
 `;
