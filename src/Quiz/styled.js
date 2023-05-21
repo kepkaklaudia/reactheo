@@ -39,4 +39,10 @@ export const StyledListButton = styled.button`
     cursor: pointer;
     scale: 1.03;
   }
+  
+  &:focus-visible {
+    transition: scale 0.5s;
+    border: 2px solid #087ea4;
+    outline: none;
+  }
 `;
