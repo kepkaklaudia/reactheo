@@ -45,4 +45,10 @@ export const StyledListButton = styled.button`
     border: 2px solid #087ea4;
     outline: none;
   }
+  
+  &.active {
+    transition: scale 0.5s;
+    border: 3px solid #087ea4;
+    cursor: pointer;
+  }
 `;
