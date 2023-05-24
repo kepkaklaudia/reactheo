@@ -51,4 +51,8 @@ export const StyledListButton = styled.button`
     border: 3px solid #087ea4;
     cursor: pointer;
   }
+
+  &.correct {
+    color: green;
+  }
 `;
