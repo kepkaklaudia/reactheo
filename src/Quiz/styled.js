@@ -55,4 +55,8 @@ export const StyledListButton = styled.button`
   &.correct {
     color: green;
   }
+
+  &.incorrect {
+    color: red;
+  }
 `;
