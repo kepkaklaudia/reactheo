@@ -60,3 +60,12 @@ export const StyledListButton = styled.button`
     color: red;
   }
 `;
+
+export const Buttons = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+`;
