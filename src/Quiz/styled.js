@@ -39,13 +39,13 @@ export const StyledListButton = styled.button`
     cursor: pointer;
     scale: 1.03;
   }
-  
+
   &:focus-visible {
     transition: scale 0.5s;
     border: 2px solid #087ea4;
     outline: none;
   }
-  
+
   &.active {
     transition: scale 0.5s;
     border: 3px solid #087ea4;
@@ -72,4 +72,15 @@ export const Buttons = styled.div`
   @media (max-width: 960px) {
     flex-direction: column;
   }
+
+  ${({ section }) =>
+    section &&
+    css`
+      @media (max-width: 960px) {
+        flex-direction: row;
+      }
+      @media (max-width: 696px) {
+        flex-direction: column;
+      }
+    `}
 `;
