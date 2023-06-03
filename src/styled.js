@@ -20,4 +20,8 @@ export const ButtonWrapper = styled.div`
 export const Icon = styled.p`
   font-size: 60px;
   margin: 20px;
+
+  @media (max-width: 696px) {
+    margin: 0;
+  }
 `;
