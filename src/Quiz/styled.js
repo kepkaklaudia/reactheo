@@ -5,8 +5,19 @@ export const Wrapper = styled.div`
   background-color: #f6f7f9;
   border-radius: 10px;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
-  max-width: 1000px;
+  width: 900px;
   margin: 0 20px;
+
+  @media (max-width: 960px) {
+    width: 650px;
+  }
+  @media (max-width: 696px) {
+    width: 500px;
+  }
+
+  @media (max-width: 550px) {
+    width: 250px;
+  }
 `;
 
 export const Heading = styled.h2`
@@ -62,17 +73,18 @@ export const StyledListButton = styled.button`
 `;
 
 export const Buttons = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
   gap: 10px;
   padding: 15px;
   justify-content: space-between;
   align-items: center;
 
   @media (max-width: 960px) {
-    flex-direction: column;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 1fr 1fr;
   }
-
+  
   ${({ section }) =>
     section &&
     css`
