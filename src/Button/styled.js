@@ -25,10 +25,22 @@ export const StyledButton = styled.button`
       height: 60px;
     `}
 
-  ${({ width }) =>
-    width &&
+  ${({ smaller }) =>
+    smaller &&
     css`
-      width: 170px;
+    font-size: 14px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    display: inline-block;
+    border: 3px solid  #087ea4;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
     `}
 
     ${({ restart }) =>
