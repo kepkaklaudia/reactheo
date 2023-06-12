@@ -10,7 +10,7 @@ export const StyledButton = styled.button`
   border: none;
   font-weight: 500;
   border-radius: 30px;
-
+  box-shadow: 0 2px 3px 0px grey;
   &:hover {
     opacity: 0.8;
     cursor: pointer;
