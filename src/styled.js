@@ -12,8 +12,13 @@ export const ButtonWrapper = styled.div`
   align-items: center;
 
   @media (max-width: 696px) {
+    gap: 60px;
+  }
+
+  @media (max-width: 550px) {
     flex-wrap: wrap;
     flex-direction: column;
+    gap: 30px;
   }
 `;
 
