@@ -28,5 +28,7 @@ export const Icon = styled.p`
 
   @media (max-width: 696px) {
     margin: 0;
+    font-size: 50px;
+    margin-bottom: 15px;
   }
 `;
