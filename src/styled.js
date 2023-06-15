@@ -32,3 +32,8 @@ export const Icon = styled.p`
     margin-bottom: 15px;
   }
 `;
+
+export const Header = styled.h1`
+  font-size: 60px;
+  margin: 60px auto 20px auto;
+`;
