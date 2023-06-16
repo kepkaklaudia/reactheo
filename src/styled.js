@@ -36,4 +36,9 @@ export const Icon = styled.p`
 export const Header = styled.h1`
   font-size: 60px;
   margin: 60px auto 20px auto;
+
+  @media (max-width: 696px) {
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
 `;
