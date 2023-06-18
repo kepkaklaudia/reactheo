@@ -10,31 +10,31 @@ export const Logo = styled.img`
   z-index: -1;
   
   &:nth-child(2) {
-    animation-delay: 2s;
+    animation-delay: 0.5s;
     left: 25vw;
     top: 45vh;
   }
   
   &:nth-child(3) {
-    animation-delay: 4s;
+    animation-delay: 1s;
     left: 75vw;
     top: 50vh;
   }
   
   &:nth-child(4) {
-    animation-delay: 6s;
+    animation-delay: 1.5s;
     left: 90vw;
     top: 30vh;
   }
   
   &:nth-child(5) {
-    animation-delay: 8s;
+    animation-delay: 2s;
     left: 10vw;
     top: 85vh;
   }
   
   &:nth-child(6) {
-    animation-delay: 10s;
+    animation-delay: 2.5s;
     left: 20vw;
     top: 25vh;
   }
