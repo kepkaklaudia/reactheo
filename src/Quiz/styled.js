@@ -6,7 +6,8 @@ export const Wrapper = styled.div`
   border-radius: 10px;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
   width: 900px;
-  margin: 0 20px;
+  max-width: 80%;
+  margin: 20px;
 
   @media (max-width: 960px) {
     width: 650px;
