@@ -47,20 +47,19 @@ export const StyledListButton = styled.button`
 
   &:hover {
     transition: border 0.5s, scale 0.5s;
-    border: 2px solid #087ea4;
+    outline: 2px solid #087ea4;
     cursor: pointer;
     scale: 1.03;
   }
 
   &:focus-visible {
     transition: scale 0.5s;
-    border: 2px solid #087ea4;
-    outline: none;
+    outline: 2px solid #087ea4;
   }
 
   &.active {
     transition: scale 0.5s;
-    border: 3px solid #087ea4;
+    outline: 3px solid #087ea4;
     cursor: pointer;
   }
 
