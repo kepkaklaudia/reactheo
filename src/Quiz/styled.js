@@ -79,6 +79,7 @@ export const Buttons = styled.div`
   padding: 15px;
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
 
   @media (max-width: 960px) {
     grid-template-columns: repeat(3, auto);
