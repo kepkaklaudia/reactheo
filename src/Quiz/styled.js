@@ -85,7 +85,14 @@ export const Buttons = styled.div`
     grid-template-columns: repeat(3, auto);
     grid-template-rows: 1fr 1fr;
   }
-  
+
+  @media (max-width: 550px) {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 10px;
+    place-content: center;
+  }
+
   ${({ section }) =>
     section &&
     css`
