@@ -23,6 +23,20 @@ export const Wrapper = styled.div`
 
 export const Heading = styled.h2`
   margin: 25px auto;
+
+  @media (max-width: 960px) {
+    margin: 15px auto;
+    font-size: 20px;
+  }
+
+  @media (max-width: 696px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 550px) {
+    margin: 10px auto;
+    font-size: 16px;
+  }
 `;
 
 export const Container = styled.div`
