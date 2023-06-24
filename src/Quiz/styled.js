@@ -41,11 +41,7 @@ export const Heading = styled.h2`
 
 export const Container = styled.div`
   margin: 25px auto;
-  width: 400px;
-
-  @media (max-width: 696px) {
-    width: 280px;
-  }
+  max-width: 400px;
 `;
 
 export const StyledListButton = styled.button`
