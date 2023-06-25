@@ -80,6 +80,16 @@ export const StyledListButton = styled.button`
   &.incorrect {
     color: red;
   }
+
+  @media (max-width: 696px) {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  @media (max-width: 550px) {
+    margin: 10px auto;
+    font-size: 12px;
+  }
 `;
 
 export const Buttons = styled.div`
