@@ -17,6 +17,17 @@ export const StyledButton = styled.button`
     transform: scale(1.05);
   }
 
+  @media (max-width: 696px) {
+    margin-top: 0px;
+    font-size: 12px;
+    width: 80px;
+    height: 40px;
+  }
+
+  @media (max-width: 550px) {
+    height: 35px;
+  }
+
   ${({ start }) =>
     start &&
     css`
@@ -28,19 +39,19 @@ export const StyledButton = styled.button`
   ${({ smaller }) =>
     smaller &&
     css`
-    font-size: 14px;
-    height: 40px;
-    background-color: white;
-    color: black;
-    display: inline-block;
-    border: 3px solid  #087ea4;
-    cursor: pointer;
-    position: relative;
-    background-color: transparent;
-    text-decoration: none;
-    overflow: hidden;
-    z-index: 1;
-    font-family: inherit;
+      font-size: 14px;
+      height: 40px;
+      background-color: white;
+      color: black;
+      display: inline-block;
+      border: 3px solid #087ea4;
+      cursor: pointer;
+      position: relative;
+      background-color: transparent;
+      text-decoration: none;
+      overflow: hidden;
+      z-index: 1;
+      font-family: inherit;
     `}
 
     ${({ restart }) =>
