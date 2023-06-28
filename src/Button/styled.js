@@ -34,6 +34,10 @@ export const StyledButton = styled.button`
       font-size: 22px;
       width: 200px;
       height: 60px;
+
+      @media (max-width: 696px) {
+        width: 110px;
+      }
     `}
 
   ${({ smaller }) =>
