@@ -56,6 +56,29 @@ export const StyledButton = styled.button`
       overflow: hidden;
       z-index: 1;
       font-family: inherit;
+      box-shadow: none;
+
+      &: hover {
+        opacity: 1;
+        transform: scale(1);
+        color: white;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #087ea4;
+        transform: translateX(-100%);
+        transition: all 0.3s;
+        z-index: -1;
+      }
+
+      &:hover::before {
+        transform: translateX(0);
+      }
     `}
 
     ${({ restart }) =>
