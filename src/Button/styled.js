@@ -79,6 +79,12 @@ export const StyledButton = styled.button`
       &:hover::before {
         transform: translateX(0);
       }
+
+      @media (max-width: 550px) {
+        margin-top: 0px;
+        font-size: 10px;
+        height: auto;
+      }
     `}
 
     ${({ restart }) =>
