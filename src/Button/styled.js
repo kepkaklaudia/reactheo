@@ -93,4 +93,12 @@ export const StyledButton = styled.button`
       margin-top: 40px;
       width: 150px;
     `}
+
+  ${({ orderPrevious }) =>
+    orderPrevious &&
+    css`
+      @media (max-width: 960px) {
+        order: -2;
+      }
+    `}
 `;
