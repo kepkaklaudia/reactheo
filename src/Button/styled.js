@@ -101,4 +101,18 @@ export const StyledButton = styled.button`
         order: -2;
       }
     `}
+
+  ${({ orderNext }) =>
+    orderNext &&
+    css`
+      @media (max-width: 960px) {
+        order: -1;
+        grid-column-start: 3;
+        justify-self: right;
+
+        @media (max-width: 550px) {
+          grid-column-start: 2;
+        }
+      }
+    `}
 `;
