@@ -115,4 +115,13 @@ export const StyledButton = styled.button`
         }
       }
     `}
+        
+    ${({ span }) =>
+    span &&
+    css`
+      @media (max-width: 550px) {
+        grid-column: span 2;
+        justify-self: center;
+      }
+    `}
 `;
