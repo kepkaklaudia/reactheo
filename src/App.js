@@ -1,3 +1,4 @@
+import { MainWrapper } from "./MainWrapper/styled";
 import { Background } from "./Background";
 import { Header } from "./styled";
 
@@ -6,6 +7,7 @@ function App() {
     <>
       <Background />
       <Header>Reactheo</Header>
+      <MainWrapper></MainWrapper>
     </>
   );
 }
