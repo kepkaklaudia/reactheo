@@ -1,10 +1,16 @@
 import { MainWrapper } from "./MainWrapper/styled";
 import { Background } from "./Background";
+import { StyledButton } from "./Button/styled";
 import { Header } from "./styled";
 
 function App() {
   const renderQuiz = () => {
-    return <div>Training mode Exam mode</div>;
+    return (
+      <div>
+        <StyledButton>Training mode</StyledButton>
+        <StyledButton>Exam mode</StyledButton>
+      </div>
+    );
   };
 
   return (
