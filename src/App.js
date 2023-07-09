@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { MainWrapper } from "./MainWrapper/styled";
 import { Background } from "./Background";
 import { StyledButton } from "./Button/styled";
 import { Header } from "./styled";
 
 function App() {
+  const [mode, setMode] = useState(null);
+
   const renderQuiz = () => {
     return (
       <div>
