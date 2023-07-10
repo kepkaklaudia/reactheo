@@ -7,6 +7,14 @@ import { Header } from "./styled";
 function App() {
   const [mode, setMode] = useState(null);
 
+  const handleTrainingModeClick = () => {
+    setMode("training");
+  };
+
+  const handleExamModeClick = () => {
+    setMode("exam");
+  };
+
   const renderQuiz = () => {
     return (
       <div>
