@@ -17,10 +17,14 @@ function App() {
 
   const renderQuiz = () => {
     return (
-      <div>
-        <StyledButton>Training mode</StyledButton>
-        <StyledButton>Exam mode</StyledButton>
-      </div>
+      <>
+        <StyledButton start="true" onClick={handleTrainingModeClick}>
+          Training mode
+        </StyledButton>
+        <StyledButton start="true" onClick={handleExamModeClick}>
+          Exam mode
+        </StyledButton>
+      </>
     );
   };
 
