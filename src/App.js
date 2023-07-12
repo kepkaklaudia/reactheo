@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MainWrapper } from "./MainWrapper/styled";
 import { Background } from "./Background";
 import { StyledButton } from "./Button/styled";
-import { Header } from "./styled";
+import { Header, Icon } from "./styled";
 
 function App() {
   const [mode, setMode] = useState(null);
@@ -18,9 +18,11 @@ function App() {
   const renderQuiz = () => {
     return (
       <>
+        <Icon>🏋️‍♂️</Icon>
         <StyledButton start="true" onClick={handleTrainingModeClick}>
           Training mode
         </StyledButton>
+        <Icon>🎓</Icon>
         <StyledButton start="true" onClick={handleExamModeClick}>
           Exam mode
         </StyledButton>
@@ -37,4 +39,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
