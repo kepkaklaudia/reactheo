@@ -3,6 +3,7 @@ import { MainWrapper } from "./MainWrapper/styled";
 import { Background } from "./Background";
 import { StyledButton } from "./Button/styled";
 import { TestQuiz } from "./Quiz/TestQuiz";
+import { ExamQuiz } from "./Quiz/ExamQuiz";
 import { ButtonWrapper, Header, Icon } from "./styled";
 import { Motion } from "./Motion";
 
@@ -20,6 +21,8 @@ function App() {
   const renderQuiz = () => {
     if (mode === "training") {
       return <TestQuiz setMode={setMode} />;
+    } else if (mode === "exam") {
+      return <ExamQuiz setMode={setMode} />;
     } else {
       return (
         <Motion
