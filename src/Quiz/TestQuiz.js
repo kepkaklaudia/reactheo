@@ -5,11 +5,15 @@ export const TestQuiz = () => {
   return (
     <>
       <Buttons>
-        <StyledButton>Previous</StyledButton>
-        <StyledButton>Show Answers</StyledButton>
-        <StyledButton>Hide Answers</StyledButton>
-        <StyledButton>Clear Selections</StyledButton>
-        <StyledButton>Next</StyledButton>
+        <StyledButton orderPrevious="true">Previous</StyledButton>
+
+        <StyledButton smaller="true">Show Answers</StyledButton>
+        <StyledButton smaller="true">Hide Answers</StyledButton>
+        <StyledButton smaller="true" span="true">
+          Clear Selections
+        </StyledButton>
+
+        <StyledButton orderNext="true">Next</StyledButton>
       </Buttons>
     </>
   );
