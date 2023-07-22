@@ -3,7 +3,9 @@ import { Buttons } from "./styled";
 import { StyledButton } from "../Button/styled";
 
 export const TestQuiz = () => {
-  const [answersChecked, setAnswersChecked] = useState(false);
+const [active, setActive] = useState([]);
+
+const [answersChecked, setAnswersChecked] = useState(false);
 
   return (
     <>
