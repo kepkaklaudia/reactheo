@@ -3,9 +3,20 @@ import { Buttons } from "./styled";
 import { StyledButton } from "../Button/styled";
 
 export const TestQuiz = () => {
-const [active, setActive] = useState([]);
 
-const [answersChecked, setAnswersChecked] = useState(false);
+  const [active, setActive] = useState([]);
+
+  const handleClick = (index) => {
+    if (!answersChecked) {
+      if (active.includes(index)) {
+        setActive(active.filter((item) => item !== index));
+      } else {
+        setActive([...active, index]);
+      }
+    }
+  };
+
+  const [answersChecked, setAnswersChecked] = useState(false);
 
   return (
     <>
