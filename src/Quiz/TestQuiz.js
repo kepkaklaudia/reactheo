@@ -3,7 +3,7 @@ import { Buttons } from "./styled";
 import { StyledButton } from "../Button/styled";
 
 export const TestQuiz = () => {
-
+  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [active, setActive] = useState([]);
 
   const handleClick = (index) => {
