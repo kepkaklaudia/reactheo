@@ -4,6 +4,7 @@ import { StyledButton } from "../Button/styled";
 
 export const TestQuiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [showResult, setShowResult] = useState(false);
   const [active, setActive] = useState([]);
 
   const handleClick = (index) => {
