@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useData } from "./getQuestions";
 import { Buttons } from "./styled";
+import { Loader } from "../Loader/styled";
 import { StyledButton } from "../Button/styled";
 
 export const TestQuiz = () => {
@@ -21,6 +22,9 @@ export const TestQuiz = () => {
   };
 
   const [answersChecked, setAnswersChecked] = useState(false);
+  if (status === "loading") {
+    return <Loader />;
+  }
 
   return (
     <>
