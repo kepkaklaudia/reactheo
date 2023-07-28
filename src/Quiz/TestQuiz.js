@@ -21,6 +21,16 @@ export const TestQuiz = () => {
     }
   };
 
+  const handleNextClick = () => {
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
+      setActive([]);
+      setAnswersChecked(false);
+    } else {
+      setShowResult(true);
+    }
+  };
+
   const [answersChecked, setAnswersChecked] = useState(false);
   if (status === "loading") {
     return <Loader />;
