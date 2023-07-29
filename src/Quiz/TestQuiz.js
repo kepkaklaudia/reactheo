@@ -31,6 +31,13 @@ export const TestQuiz = () => {
     }
   };
 
+  const handlePreviousClick = () => {
+    if (currentQuestion > 0) {
+      setCurrentQuestion(currentQuestion - 1);
+      setActive([]);
+    }
+  };
+
   const [answersChecked, setAnswersChecked] = useState(false);
   if (status === "loading") {
     return <Loader />;
