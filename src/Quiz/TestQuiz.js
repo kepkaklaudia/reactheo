@@ -38,6 +38,13 @@ export const TestQuiz = () => {
     }
   };
 
+  const handleResetClick = () => {
+    setCurrentQuestion(0);
+    setShowResult(false);
+    setActive([]);
+    setMode(null);
+  };
+
   const [answersChecked, setAnswersChecked] = useState(false);
   if (status === "loading") {
     return <Loader />;
