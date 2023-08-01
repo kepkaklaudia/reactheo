@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useData } from "./getQuestions";
-import { Wrapper, Buttons } from "./styled";
+import { Wrapper,Buttons } from "./styled";
 import { Loader } from "../Loader/styled";
 import { StyledButton } from "../Button/styled";
 
@@ -53,15 +53,22 @@ export const TestQuiz = () => {
   return (
     <>
       <Wrapper>
-        <Buttons>
-          <StyledButton orderPrevious="true">Previous</StyledButton>
-          <StyledButton smaller="true">Show Answers</StyledButton>
-          <StyledButton smaller="true">Hide Answers</StyledButton>
-          <StyledButton smaller="true" span="true">
-            Clear Selections
-          </StyledButton>
-          <StyledButton orderNext="true">Next</StyledButton>
-        </Buttons>
+        {showResult ? (
+          <div>
+            <h2>No more questions!</h2>
+            <StyledButton>Try again</StyledButton>
+          </div>
+        ) : (
+          <Buttons>
+            <StyledButton orderPrevious="true">Previous</StyledButton>
+            <StyledButton smaller="true">Show Answers</StyledButton>
+            <StyledButton smaller="true">Hide Answers</StyledButton>
+            <StyledButton smaller="true" span="true">
+              Clear Selections
+            </StyledButton>
+            <StyledButton orderNext="true">Next</StyledButton>
+          </Buttons>
+        )}
       </Wrapper>
     </>
   );
