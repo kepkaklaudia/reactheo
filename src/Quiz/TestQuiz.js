@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { useData } from "./getQuestions";
-import { Wrapper,Buttons } from "./styled";
+import { StyledListButton, Wrapper, Buttons } from "./styled";
 import { Loader } from "../Loader/styled";
 import { StyledButton } from "../Button/styled";
-
 export const TestQuiz = () => {
   const data = useData();
   const [currentQuestion, setCurrentQuestion] = useState(0);
