@@ -56,7 +56,7 @@ export const TestQuiz = () => {
         {showResult ? (
           <div>
             <h2>No more questions!</h2>
-            <StyledButton>Try again</StyledButton>
+            <StyledButton onClick={handleResetClick}>Try again</StyledButton>
           </div>
         ) : (
           <Buttons>
@@ -66,7 +66,14 @@ export const TestQuiz = () => {
             >
               Previous
             </StyledButton>
-            <StyledButton smaller="true">Show Answers</StyledButton>
+            <StyledButton
+              smaller="true"
+              onClick={() => {
+                setAnswersChecked(true);
+              }}
+            >
+              Show Answers
+            </StyledButton>
             <StyledButton smaller="true">Hide Answers</StyledButton>
             <StyledButton smaller="true" span="true">
               Clear Selections
