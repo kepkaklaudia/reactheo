@@ -74,7 +74,14 @@ export const TestQuiz = () => {
             >
               Show Answers
             </StyledButton>
-            <StyledButton smaller="true">Hide Answers</StyledButton>
+            <StyledButton
+              smaller="true"
+              onClick={() => {
+                setAnswersChecked(false);
+              }}
+            >
+              Hide Answers
+            </StyledButton>
             <StyledButton smaller="true" span="true">
               Clear Selections
             </StyledButton>
