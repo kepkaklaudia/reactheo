@@ -82,7 +82,13 @@ export const TestQuiz = () => {
             >
               Hide Answers
             </StyledButton>
-            <StyledButton smaller="true" span="true">
+            <StyledButton
+              smaller="true"
+              span="true"
+              onClick={() => {
+                setActive([]);
+              }}
+            >
               Clear Selections
             </StyledButton>
             <StyledButton orderNext="true">Next</StyledButton>
