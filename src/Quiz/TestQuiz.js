@@ -91,7 +91,10 @@ export const TestQuiz = () => {
             >
               Clear Selections
             </StyledButton>
-            <StyledButton orderNext="true">Next</StyledButton>
+
+            <StyledButton orderNext="true" onClick={() => handleNextClick()}>
+              Next
+            </StyledButton>
           </Buttons>
         )}
       </Wrapper>
