@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useData } from "./getQuestions";
-import { StyledListButton, Wrapper, Buttons } from "./styled";
+import { StyledListButton, Wrapper, Heading, Buttons } from "./styled";
 import { Loader } from "../Loader/styled";
 import { StyledButton } from "../Button/styled";
 
@@ -59,43 +59,46 @@ export const TestQuiz = () => {
             <StyledButton onClick={handleResetClick}>Try again</StyledButton>
           </div>
         ) : (
-          <Buttons>
-            <StyledButton
-              orderPrevious="true"
-              onClick={() => handlePreviousClick()}
-            >
-              Previous
-            </StyledButton>
-            <StyledButton
-              smaller="true"
-              onClick={() => {
-                setAnswersChecked(true);
-              }}
-            >
-              Show Answers
-            </StyledButton>
-            <StyledButton
-              smaller="true"
-              onClick={() => {
-                setAnswersChecked(false);
-              }}
-            >
-              Hide Answers
-            </StyledButton>
-            <StyledButton
-              smaller="true"
-              span="true"
-              onClick={() => {
-                setActive([]);
-              }}
-            >
-              Clear Selections
-            </StyledButton>
+          <>
+            <Heading>{questions[currentQuestion].question}</Heading>
+            <Buttons>
+              <StyledButton
+                orderPrevious="true"
+                onClick={() => handlePreviousClick()}
+              >
+                Previous
+              </StyledButton>
+              <StyledButton
+                smaller="true"
+                onClick={() => {
+                  setAnswersChecked(true);
+                }}
+              >
+                Show Answers
+              </StyledButton>
+              <StyledButton
+                smaller="true"
+                onClick={() => {
+                  setAnswersChecked(false);
+                }}
+              >
+                Hide Answers
+              </StyledButton>
+              <StyledButton
+                smaller="true"
+                span="true"
+                onClick={() => {
+                  setActive([]);
+                }}
+              >
+                Clear Selections
+              </StyledButton>
 
-            <StyledButton orderNext="true" onClick={() => handleNextClick()}>
-              Next
-            </StyledButton>
-          </Buttons>
+              <StyledButton orderNext="true" onClick={() => handleNextClick()}>
+                Next
+              </StyledButton>
+            </Buttons>
+          </>
         )}
       </Wrapper>
     </>
