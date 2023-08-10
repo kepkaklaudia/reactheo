@@ -61,6 +61,9 @@ export const TestQuiz = () => {
         ) : (
           <>
             <Heading>{questions[currentQuestion].question}</Heading>
+            {questions[currentQuestion].options.map((option, index) => (
+              <>{option.text}</>
+            ))}
             <Buttons>
               <StyledButton
                 orderPrevious="true"
