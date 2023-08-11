@@ -62,7 +62,18 @@ export const TestQuiz = () => {
           <>
             <Heading>{questions[currentQuestion].question}</Heading>
             {questions[currentQuestion].options.map((option, index) => (
-              <>{option.text}</>
+              <StyledListButton
+                className={
+                  (active.includes(index) ? "active " : "") +
+                  (answersChecked
+                    ? option.isTrue
+                      ? "correct"
+                      : "incorrect"
+                    : "")
+                }
+              >
+                {option.text}
+              </StyledListButton>
             ))}
             <Buttons>
               <StyledButton
