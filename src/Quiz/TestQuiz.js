@@ -3,6 +3,7 @@ import { useData } from "./getQuestions";
 import { StyledListButton, Wrapper, Heading, Buttons } from "./styled";
 import { Loader } from "../Loader/styled";
 import { StyledButton } from "../Button/styled";
+import { useAnimation } from "framer-motion";
 
 export const TestQuiz = () => {
   const data = useData();
@@ -10,6 +11,7 @@ export const TestQuiz = () => {
   const [showResult, setShowResult] = useState(false);
   const [active, setActive] = useState([]);
   const { questions, status } = data;
+  const board = useAnimation();
 
   const handleClick = (index) => {
     if (!answersChecked) {
@@ -26,6 +28,8 @@ export const TestQuiz = () => {
       setCurrentQuestion(currentQuestion + 1);
       setActive([]);
       setAnswersChecked(false);
+      board.set({ y: 20, opacity: 0, scale: 1.05 });
+      board.start({ y: 0, opacity: 1, scale: 1 });
     } else {
       setShowResult(true);
     }
@@ -35,6 +39,8 @@ export const TestQuiz = () => {
     if (currentQuestion > 0) {
       setCurrentQuestion(currentQuestion - 1);
       setActive([]);
+      board.set({ y: -20, scale: 1.05 });
+      board.start({ y: 0, scale: 1 });
     }
   };
 
