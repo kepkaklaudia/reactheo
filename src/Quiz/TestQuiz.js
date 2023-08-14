@@ -5,6 +5,7 @@ import { Loader } from "../Loader/styled";
 import { StyledButton } from "../Button/styled";
 import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
+import { Motion } from "../Motion";
 
 export const TestQuiz = () => {
   const data = useData();
@@ -66,10 +67,16 @@ export const TestQuiz = () => {
     <>
       <Wrapper>
         {showResult ? (
-          <div>
-            <h2>No more questions!</h2>
-            <StyledButton onClick={handleResetClick}>Try again</StyledButton>
-          </div>
+          <Motion
+            animatedElement={
+              <div>
+                <h2>No more questions!</h2>
+                <StyledButton onClick={handleResetClick}>
+                  Try again
+                </StyledButton>
+              </div>
+            }
+          />
         ) : (
           <>
             <motion.div animate={heading}>
