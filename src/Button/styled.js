@@ -4,7 +4,7 @@ export const StyledButton = styled.button`
   font-size: 18px;
   background-color: #087ea4;
   color: #fff;
-  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out, background-color 0.2s ease-out;
   width: 120px;
   height: 50px;
   border: none;
