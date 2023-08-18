@@ -47,6 +47,20 @@ export const StyledButton = styled.button`
         width: 110px;
       }
     `}
+    
+  ${({ examMode }) =>
+    examMode &&
+    css`
+      grid-column-start: 5;
+
+      @media (max-width: 960px) {
+        grid-column-start: 3;
+      }
+
+      @media (max-width: 550px) {
+        grid-column-start: 2;
+      }
+    `}
 
   ${({ smaller }) =>
     smaller &&
