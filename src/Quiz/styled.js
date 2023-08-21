@@ -113,6 +113,18 @@ export const Buttons = styled.div`
     place-content: center;
   }
 
+  ${({ examMode }) =>
+    examMode &&
+    css`
+      @media (max-width: 960px) {
+        grid-template-rows: 1fr;
+      }
+
+      @media (max-width: 550px) {
+        grid-template-columns: 1fr;
+      }
+    `}
+
   ${({ section }) =>
     section &&
     css`
