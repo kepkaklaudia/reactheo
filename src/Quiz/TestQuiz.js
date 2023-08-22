@@ -7,7 +7,7 @@ import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
 import { Motion } from "../Motion";
 
-export const TestQuiz = () => {
+export const TestQuiz = ({ setMode }) => {
   const data = useData();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showResult, setShowResult] = useState(false);
@@ -64,80 +64,76 @@ export const TestQuiz = () => {
   }
 
   return (
-    <>
-      <Wrapper>
-        {showResult ? (
-          <Motion
-            animatedElement={
-              <div>
-                <h2>No more questions!</h2>
-                <StyledButton onClick={handleResetClick}>
-                  Try again
-                </StyledButton>
-              </div>
-            }
-          />
-        ) : (
-          <>
-            <motion.div animate={heading}>
-              <Heading>{questions[currentQuestion].question}</Heading>
+    <Wrapper>
+      {showResult ? (
+        <Motion
+          animatedElement={
+            <div>
+              <h2>No more questions!</h2>
+              <StyledButton onClick={handleResetClick}>Try again</StyledButton>
+            </div>
+          }
+        />
+      ) : (
+        <>
+          <motion.div animate={heading}>
+            <Heading>{questions[currentQuestion].question}</Heading>
+          </motion.div>
+          {questions[currentQuestion].options.map((option, index) => (
+            <motion.div key={index} animate={board}>
+              <StyledListButton
+                className={
+                  (active.includes(index) ? "active " : "") +
+                  (answersChecked
+                    ? option.isTrue
+                      ? "correct"
+                      : "incorrect"
+                    : "")
+                }
+                onClick={() => handleClick(index)}
+              >
+                {option.text}
+              </StyledListButton>
             </motion.div>
-            {questions[currentQuestion].options.map((option, index) => (
-              <motion.div key={index} animate={board}>
-                <StyledListButton
-                  className={
-                    (active.includes(index) ? "active " : "") +
-                    (answersChecked
-                      ? option.isTrue
-                        ? "correct"
-                        : "incorrect"
-                      : "")
-                  }
-                >
-                  {option.text}
-                </StyledListButton>
-              </motion.div>
-            ))}
-            <Buttons>
-              <StyledButton
-                orderPrevious="true"
-                onClick={() => handlePreviousClick()}
-              >
-                Previous
-              </StyledButton>
-              <StyledButton
-                smaller="true"
-                onClick={() => {
-                  setAnswersChecked(true);
-                }}
-              >
-                Show Answers
-              </StyledButton>
-              <StyledButton
-                smaller="true"
-                onClick={() => {
-                  setAnswersChecked(false);
-                }}
-              >
-                Hide Answers
-              </StyledButton>
-              <StyledButton
-                smaller="true"
-                span="true"
-                onClick={() => {
-                  setActive([]);
-                }}
-              >
-                Clear Selections
-              </StyledButton>
-
-              <StyledButton orderNext="true" onClick={() => handleNextClick()}>
-                Next
-              </StyledButton>
-            </Buttons>
-          </>
-        )}
-      </Wrapper>
-    </>
+          ))}
+          <Buttons>
+            <StyledButton
+              orderPrevious="true"
+              onClick={() => handlePreviousClick()}
+            >
+              Previous
+            </StyledButton>
+            <StyledButton
+              smaller="true"
+              onClick={() => {
+                setAnswersChecked(true);
+              }}
+            >
+              Show Answers
+            </StyledButton>
+            <StyledButton
+              smaller="true"
+              onClick={() => {
+                setAnswersChecked(false);
+              }}
+            >
+              Hide Answers
+            </StyledButton>
+            <StyledButton
+              smaller="true"
+              span="true"
+              onClick={() => {
+                setActive([]);
+              }}
+            >
+              Clear Selections
+            </StyledButton>
+            <StyledButton orderNext="true" onClick={() => handleNextClick()}>
+              Next
+            </StyledButton>
+          </Buttons>
+        </>
+      )}
+    </Wrapper>
   );
 };
