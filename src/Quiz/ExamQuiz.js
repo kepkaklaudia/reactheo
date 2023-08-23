@@ -1,7 +1,5 @@
+import { Wrapper } from "./styled";
 
 export const ExamQuiz = () => {
-  
-  return (
-    <></>
-  );
+  return <Wrapper></Wrapper>;
 };
