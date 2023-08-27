@@ -21,6 +21,12 @@ export const ExamQuiz = ({ setMode }) => {
     } else if (!isTrue && active.includes(index)) {
       setScore(score + 0.25);
     }
+
+    if (active.includes(index)) {
+      setActive(active.filter((item) => item !== index));
+    } else {
+      setActive([...active, index]);
+    }
   };
 
   return status === "loading" ? <Loader /> : <Wrapper></Wrapper>;
