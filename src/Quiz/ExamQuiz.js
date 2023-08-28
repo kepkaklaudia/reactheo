@@ -29,5 +29,14 @@ export const ExamQuiz = ({ setMode }) => {
     }
   };
 
+  const handleNextClick = () => {
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
+      setActive([]);
+    } else {
+      setShowResult(true);
+    }
+  };
+
   return status === "loading" ? <Loader /> : <Wrapper></Wrapper>;
 };
