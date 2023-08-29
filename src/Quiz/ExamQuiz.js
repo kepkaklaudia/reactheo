@@ -38,5 +38,13 @@ export const ExamQuiz = ({ setMode }) => {
     }
   };
 
+  const handleResetClick = () => {
+    setCurrentQuestion(0);
+    setShowResult(false);
+    setActive([]);
+    setScore(0);
+    setMode(null);
+  };
+
   return status === "loading" ? <Loader /> : <Wrapper></Wrapper>;
 };
