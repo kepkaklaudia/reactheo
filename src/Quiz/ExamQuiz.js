@@ -46,5 +46,13 @@ export const ExamQuiz = ({ setMode }) => {
     setMode(null);
   };
 
-  return status === "loading" ? <Loader /> : <Wrapper></Wrapper>;
+  const initialValue = 0;
+  const countTrue =
+    questions &&
+    questions.reduce((totalTrue, question) => {
+      const filterTrue = question.options.filter((option) => option.isTrue);
+      return totalTrue + filterTrue.length;
+    }, initialValue);
+
+  return status === "loading" ? <Loader /> : <Wrapper> </Wrapper>;
 };
