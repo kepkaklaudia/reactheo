@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useData } from "./getQuestions";
-import { Wrapper } from "./styled";
+import { Wrapper, Heading } from "./styled";
 import { Loader } from "../Loader/styled";
 
 export const ExamQuiz = ({ setMode }) => {
@@ -38,21 +38,13 @@ export const ExamQuiz = ({ setMode }) => {
     }
   };
 
-  const handleResetClick = () => {
-    setCurrentQuestion(0);
-    setShowResult(false);
-    setActive([]);
-    setScore(0);
-    setMode(null);
-  };
-
-  const initialValue = 0;
-  const countTrue =
-    questions &&
-    questions.reduce((totalTrue, question) => {
-      const filterTrue = question.options.filter((option) => option.isTrue);
-      return totalTrue + filterTrue.length;
-    }, initialValue);
-
-  return status === "loading" ? <Loader /> : <Wrapper> </Wrapper>;
+  return status === "loading" ? (
+    <Loader />
+  ) : (
+    <Wrapper>
+      <>
+        <Heading>{questions[currentQuestion].question}</Heading>
+      </>
+    </Wrapper>
+  );
 };
