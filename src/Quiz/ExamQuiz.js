@@ -38,6 +38,22 @@ export const ExamQuiz = ({ setMode }) => {
     }
   };
 
+  const handleResetClick = () => {
+    setCurrentQuestion(0);
+    setShowResult(false);
+    setActive([]);
+    setScore(0);
+    setMode(null);
+  };
+
+  const initialValue = 0;
+  const countTrue =
+    questions &&
+    questions.reduce((totalTrue, question) => {
+      const filterTrue = question.options.filter((option) => option.isTrue);
+      return totalTrue + filterTrue.length;
+    }, initialValue);
+
   return status === "loading" ? (
     <Loader />
   ) : (
