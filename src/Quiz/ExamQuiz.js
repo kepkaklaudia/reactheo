@@ -60,6 +60,14 @@ export const ExamQuiz = ({ setMode }) => {
     <Wrapper>
       <>
         <Heading>{questions[currentQuestion].question}</Heading>
+        {questions[currentQuestion].options.map((option, index) => (
+          <StyledListButton
+            key={index}
+            onClick={() => handleAnswerClick(option.isTrue, index)}
+          >
+            {option.text}
+          </StyledListButton>
+        ))}
       </>
     </Wrapper>
   );
