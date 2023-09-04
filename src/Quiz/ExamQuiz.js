@@ -63,6 +63,7 @@ export const ExamQuiz = ({ setMode }) => {
         {questions[currentQuestion].options.map((option, index) => (
           <StyledListButton
             key={index}
+            className={active.includes(index) ? "active " : ""}
             onClick={() => handleAnswerClick(option.isTrue, index)}
           >
             {option.text}
