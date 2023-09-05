@@ -69,7 +69,9 @@ export const ExamQuiz = ({ setMode }) => {
             {option.text}
           </StyledListButton>
         ))}
-        <Buttons examMode></Buttons>
+        <Buttons examMode>
+          <StyledButton>Next</StyledButton>
+        </Buttons>
       </>
     </Wrapper>
   );
