@@ -70,7 +70,13 @@ export const ExamQuiz = ({ setMode }) => {
           </StyledListButton>
         ))}
         <Buttons examMode>
-          <StyledButton>Next</StyledButton>
+          <StyledButton
+            examMode
+            disabled={active.length === 0}
+            onClick={handleNextClick}
+          >
+            Next
+          </StyledButton>
         </Buttons>
       </>
     </Wrapper>
