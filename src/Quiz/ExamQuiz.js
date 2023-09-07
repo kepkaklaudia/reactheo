@@ -58,27 +58,31 @@ export const ExamQuiz = ({ setMode }) => {
     <Loader />
   ) : (
     <Wrapper>
-      <>
-        <Heading>{questions[currentQuestion].question}</Heading>
-        {questions[currentQuestion].options.map((option, index) => (
-          <StyledListButton
-            key={index}
-            className={active.includes(index) ? "active " : ""}
-            onClick={() => handleAnswerClick(option.isTrue, index)}
-          >
-            {option.text}
-          </StyledListButton>
-        ))}
-        <Buttons examMode>
-          <StyledButton
-            examMode
-            disabled={active.length === 0}
-            onClick={handleNextClick}
-          >
-            Next
-          </StyledButton>
-        </Buttons>
-      </>
+      {showResult ? (
+        <Container></Container>
+      ) : (
+        <>
+          <Heading>{questions[currentQuestion].question}</Heading>
+          {questions[currentQuestion].options.map((option, index) => (
+            <StyledListButton
+              key={index}
+              className={active.includes(index) ? "active " : ""}
+              onClick={() => handleAnswerClick(option.isTrue, index)}
+            >
+              {option.text}
+            </StyledListButton>
+          ))}
+          <Buttons examMode>
+            <StyledButton
+              examMode
+              disabled={active.length === 0}
+              onClick={handleNextClick}
+            >
+              Next
+            </StyledButton>
+          </Buttons>
+        </>
+      )}
     </Wrapper>
   );
 };
