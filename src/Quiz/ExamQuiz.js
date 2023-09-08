@@ -59,7 +59,7 @@ export const ExamQuiz = ({ setMode }) => {
   ) : (
     <Wrapper>
       {showResult ? (
-        <Container></Container>
+        <Motion animatedElement={<Container></Container>} />
       ) : (
         <>
           <Heading>{questions[currentQuestion].question}</Heading>
