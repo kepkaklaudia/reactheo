@@ -1,7 +1,15 @@
 import { useState } from "react";
 import { useData } from "./getQuestions";
-import { Wrapper, Heading } from "./styled";
+import {
+  StyledListButton,
+  Wrapper,
+  Heading,
+  Buttons,
+  Container,
+} from "./styled";
 import { Loader } from "../Loader/styled";
+import { StyledButton } from "../Button/styled";
+import { Motion } from "../Motion";
 
 export const ExamQuiz = ({ setMode }) => {
   const data = useData();
