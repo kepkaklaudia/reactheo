@@ -62,6 +62,14 @@ export const TestQuiz = ({ setMode }) => {
   if (status === "loading") {
     return <Loader />;
   }
+  if (status === "error") {
+    return (
+      <Wrapper>
+        <h2>Wystąpił błąd!</h2>
+        <p>Spróbuj jeszcze raz</p>
+      </Wrapper>
+    );
+  }
 
   return (
     <Wrapper>
