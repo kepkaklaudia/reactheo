@@ -67,6 +67,7 @@ export const TestQuiz = ({ setMode }) => {
       <Wrapper>
         <h2>Wystąpił błąd!</h2>
         <p>Spróbuj jeszcze raz</p>
+        <StyledButton onClick={handleResetClick}>Go to start</StyledButton>
       </Wrapper>
     );
   }
