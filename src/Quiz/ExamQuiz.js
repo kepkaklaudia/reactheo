@@ -62,9 +62,20 @@ export const ExamQuiz = ({ setMode }) => {
       return totalTrue + filterTrue.length;
     }, initialValue);
 
-  return status === "loading" ? (
-    <Loader />
-  ) : (
+  if (status === "loading") {
+    return <Loader />;
+  }
+  if (status === "error") {
+    return (
+      <Wrapper>
+        <h2>Wystąpił błąd!</h2>
+        <p>Spróbuj jeszcze raz</p>
+        <StyledButton onClick={handleResetClick}>Go to start</StyledButton>
+      </Wrapper>
+    );
+  }
+
+  return (
     <Wrapper>
       {showResult ? (
         <Motion
