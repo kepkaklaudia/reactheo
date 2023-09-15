@@ -95,7 +95,9 @@ export const ExamQuiz = ({ setMode }) => {
         />
       ) : (
         <>
-          <Heading>{questions[currentQuestion].question}</Heading>
+          <motion.div animate={heading}>
+            <Heading>{questions[currentQuestion].question}</Heading>
+          </motion.div>
           {questions[currentQuestion].options.map((option, index) => (
             <StyledListButton
               key={index}
