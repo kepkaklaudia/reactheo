@@ -3,8 +3,7 @@ import { useData } from "./getQuestions";
 import { StyledListButton, Wrapper, Heading, Buttons } from "./styled";
 import { Loader } from "../Loader/styled";
 import { StyledButton } from "../Button/styled";
-import { useAnimation } from "framer-motion";
-import { motion } from "framer-motion";
+import { useAnimation, motion } from "framer-motion";
 import { Motion } from "../Motion";
 
 export const TestQuiz = ({ setMode }) => {

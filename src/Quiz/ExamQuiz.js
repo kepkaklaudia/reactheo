@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useAnimation, motion } from "framer-motion";
 import { useData } from "./getQuestions";
 import {
   StyledListButton,
@@ -18,6 +19,8 @@ export const ExamQuiz = ({ setMode }) => {
   const [active, setActive] = useState([]);
   const [score, setScore] = useState(0);
   const { questions, status } = data;
+  const board = useAnimation();
+  const heading = useAnimation();
 
   const handleAnswerClick = (isTrue, index) => {
     if (isTrue && !active.includes(index)) {
@@ -41,6 +44,10 @@ export const ExamQuiz = ({ setMode }) => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
       setActive([]);
+      board.set({ y: 20, opacity: 0, scale: 1.05 });
+      board.start({ y: 0, opacity: 1, scale: 1 });
+      heading.set({ opacity: 0, x: -20 });
+      heading.start({ opacity: 1, x: 0 });
     } else {
       setShowResult(true);
     }
@@ -99,13 +106,15 @@ export const ExamQuiz = ({ setMode }) => {
             <Heading>{questions[currentQuestion].question}</Heading>
           </motion.div>
           {questions[currentQuestion].options.map((option, index) => (
-            <StyledListButton
-              key={index}
-              className={active.includes(index) ? "active " : ""}
-              onClick={() => handleAnswerClick(option.isTrue, index)}
-            >
-              {option.text}
-            </StyledListButton>
+            <motion.div key={index} animate={board}>
+              <StyledListButton
+                key={index}
+                className={active.includes(index) ? "active " : ""}
+                onClick={() => handleAnswerClick(option.isTrue, index)}
+              >
+                {option.text}
+              </StyledListButton>
+            </motion.div>
           ))}
           <Buttons examMode>
             <StyledButton
