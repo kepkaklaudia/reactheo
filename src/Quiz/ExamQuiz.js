@@ -91,7 +91,7 @@ export const ExamQuiz = ({ setMode }) => {
               <Heading>
                 You scored
                 <br />
-                {score > 0 ? `${score} / ${countTrue}` : "0"} points!
+                {`${score > 0 ? score : "0"} / ${countTrue}`} points!
               </Heading>
               <h3>It's {score > 0 ? (score * 100) / countTrue : "0"} %!</h3>
               <StyledButton restart onClick={handleResetClick}>
