@@ -84,6 +84,9 @@ export const TestQuiz = ({ setMode }) => {
         />
       ) : (
         <>
+          <span>
+            Question {currentQuestion + 1} / {questions.length}
+          </span>
           <motion.div animate={heading}>
             <Heading>{questions[currentQuestion].question}</Heading>
           </motion.div>
@@ -107,6 +110,7 @@ export const TestQuiz = ({ setMode }) => {
           <Buttons>
             <StyledButton
               orderPrevious="true"
+              disabled={currentQuestion === 0}
               onClick={() => handlePreviousClick()}
             >
               Previous
