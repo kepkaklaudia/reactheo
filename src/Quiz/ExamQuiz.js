@@ -102,6 +102,9 @@ export const ExamQuiz = ({ setMode }) => {
         />
       ) : (
         <>
+          <span>
+            Question {currentQuestion + 1} / {questions.length}
+          </span>
           <motion.div animate={heading}>
             <Heading>{questions[currentQuestion].question}</Heading>
           </motion.div>
