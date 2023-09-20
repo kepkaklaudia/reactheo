@@ -140,7 +140,11 @@ export const TestQuiz = ({ setMode }) => {
             >
               Clear Selections
             </StyledButton>
-            <StyledButton orderNext="true" onClick={() => handleNextClick()}>
+            <StyledButton
+              disabled={active.length === 0}
+              orderNext="true"
+              onClick={() => handleNextClick()}
+            >
               Next
             </StyledButton>
           </Buttons>
