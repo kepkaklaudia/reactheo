@@ -48,5 +48,30 @@
         "index": 3
       }
     ]
+  },
+  {
+    "question": "Which statements about starting new React project are true?",
+    "options": [
+      {
+        "text": "Create React App is recommended way to try out React while learning.",
+        "isTrue": true,
+        "index": 0
+      },
+      {
+        "text": "To create a project with create-react-app you don't need to install Node.js first.",
+        "isTrue": false,
+        "index": 1
+      },
+      {
+        "text": "You can use create-react-app with any backend.",
+        "isTrue": true,
+        "index": 2
+      },
+      {
+        "text": "Create React App handles backend logic or databases.",
+        "isTrue": false,
+        "index": 3
+      }
+    ]
   }
 ]
