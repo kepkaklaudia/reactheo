@@ -73,5 +73,30 @@
         "index": 3
       }
     ]
+  },
+  {
+    "question": "Which statements about full-featured frameworks are true?",
+    "options": [
+      {
+        "text": "Next.js is a popular, lightweight framework for static and server-rendered applications built with React.",
+        "isTrue": true,
+        "index": 0
+      },
+      {
+        "text": "Opinionated Frameworks have common features like data fetching and routing built-in.",
+        "isTrue": true,
+        "index": 1
+      },
+      {
+        "text": "Gatsby, Remix, Razzle are not popular alternatives to Next.js",
+        "isTrue": false,
+        "index": 2
+      },
+      {
+        "text": "Next.js assumes that you’re usin Node.js as the server environment.",
+        "isTrue": true,
+        "index": 3
+      }
+    ]
   }
 ]
