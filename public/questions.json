@@ -98,5 +98,30 @@
         "index": 3
       }
     ]
+  },
+  {
+    "question": "Which statements about toolchains are true?",
+    "options": [
+      {
+        "text": "You can create and configure your own toolchain.",
+        "isTrue": true,
+        "index": 0
+      },
+      {
+        "text": "It's not possible to manage multiple packages in a single repository.",
+        "isTrue": false,
+        "index": 1
+      },
+      {
+        "text": "Popular package managers are npm, Yarn and pnpm.",
+        "isTrue": true,
+        "index": 2
+      },
+      {
+        "text": "A compiler does not compile modern language features.",
+        "isTrue": false,
+        "index": 3
+      }
+    ]
   }
 ]
